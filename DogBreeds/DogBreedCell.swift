@@ -11,6 +11,7 @@ class DogBreedCell: UITableViewCell {
 
     @IBOutlet weak var breedLabel: UILabel!
     @IBOutlet weak var subBreedLabel: UILabel!
+    @IBOutlet weak var dogBreedImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
