@@ -10,22 +10,36 @@ import UIKit
 class DogBreedDetailViewController: UIViewController {
     
     var dogBreed: DogBreed!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var dogBreedImage: UIImageView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBAction func newDogImage(_ sender: UIButton) {
+        fetchImage()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fetchImage()
     }
-    */
+    
+    func fetchImage() {
+        //Initialize animations
+        spinner.isHidden = false
+        dogBreedImage.isHidden = true
+        spinner.startAnimating()
+        // fetch image using breed name
+        fetchDogImage(dogBreed: dogBreed.name) { response in
+            switch response {
+            case .success(let data):
+                DispatchQueue.main.async {
+                    self.dogBreedImage.image = data
+                    self.dogBreed.image = data
+                    self.dogBreedImage.isHidden = false
+                    self.spinner.isHidden = true
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 
 }

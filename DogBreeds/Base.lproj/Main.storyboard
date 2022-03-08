@@ -17,50 +17,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dogbreed" rowHeight="60" id="MIN-yJ-Sas" customClass="DogBreedCell" customModule="DogBreeds" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dogbreed" rowHeight="100" id="MIN-yJ-Sas" customClass="DogBreedCell" customModule="DogBreeds" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MIN-yJ-Sas" id="uCI-h3-Sq6">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Breed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0T-T7-0UJ">
-                                            <rect key="frame" x="61" y="20" width="45.5" height="20.5"/>
+                                            <rect key="frame" x="61" y="40" width="45.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Breed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tP-gL-9dP">
-                                            <rect key="frame" x="114.5" y="20" width="279.5" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" systemColor="secondaryLabelColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lci-TT-afj">
-                                            <rect key="frame" x="8" y="7.5" width="45" height="45"/>
+                                            <rect key="frame" x="8" y="27.5" width="45" height="45"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="45" id="LgI-o7-DXc"/>
                                                 <constraint firstAttribute="height" constant="45" id="cqA-wn-TBC"/>
                                             </constraints>
                                         </imageView>
-                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="MxG-BL-Syz">
-                                            <rect key="frame" x="8" y="7.5" width="45" height="45"/>
+                                        <activityIndicatorView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="MxG-BL-Syz">
+                                            <rect key="frame" x="8" y="27.5" width="45" height="45"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="45" id="NBZ-Zs-qer"/>
                                                 <constraint firstAttribute="height" constant="45" id="jAW-9a-HyV"/>
                                             </constraints>
                                         </activityIndicatorView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Breed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tP-gL-9dP">
+                                            <rect key="frame" x="110" y="40" width="276" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="3tP-gL-9dP" firstAttribute="leading" secondItem="u0T-T7-0UJ" secondAttribute="trailing" constant="3.5" id="0Jb-Qf-GM8"/>
                                         <constraint firstItem="lci-TT-afj" firstAttribute="leading" secondItem="uCI-h3-Sq6" secondAttribute="leading" constant="8" id="35z-ye-ttO"/>
-                                        <constraint firstItem="3tP-gL-9dP" firstAttribute="leading" secondItem="u0T-T7-0UJ" secondAttribute="trailing" constant="8" id="AwY-NO-P7S"/>
                                         <constraint firstItem="u0T-T7-0UJ" firstAttribute="centerY" secondItem="uCI-h3-Sq6" secondAttribute="centerY" id="CEr-fS-1a6"/>
                                         <constraint firstItem="lci-TT-afj" firstAttribute="centerY" secondItem="uCI-h3-Sq6" secondAttribute="centerY" id="CQ7-C5-yDF"/>
+                                        <constraint firstItem="3tP-gL-9dP" firstAttribute="centerY" secondItem="uCI-h3-Sq6" secondAttribute="centerY" id="K1I-k3-5tr"/>
                                         <constraint firstItem="u0T-T7-0UJ" firstAttribute="leading" secondItem="lci-TT-afj" secondAttribute="trailing" constant="8" id="LKi-Mx-Jr6"/>
                                         <constraint firstItem="MxG-BL-Syz" firstAttribute="leading" secondItem="uCI-h3-Sq6" secondAttribute="leading" constant="8" id="OF6-Ak-fiN"/>
-                                        <constraint firstItem="3tP-gL-9dP" firstAttribute="centerY" secondItem="uCI-h3-Sq6" secondAttribute="centerY" id="ckB-We-MHQ"/>
                                         <constraint firstItem="MxG-BL-Syz" firstAttribute="centerY" secondItem="uCI-h3-Sq6" secondAttribute="centerY" id="rBI-PS-wB4"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="3tP-gL-9dP" secondAttribute="trailing" id="yGN-oX-x7h"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="3tP-gL-9dP" secondAttribute="trailingMargin" constant="16" id="yGN-oX-x7h"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -86,7 +86,7 @@
         <!--Detail-->
         <scene sceneID="zr2-ty-jdW">
             <objects>
-                <viewController id="2qF-wD-mB8" sceneMemberID="viewController">
+                <viewController id="2qF-wD-mB8" customClass="DogBreedDetailViewController" customModule="DogBreeds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yds-iF-xsI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,27 +98,41 @@
                                     <constraint firstAttribute="width" constant="280" id="wkk-OP-dI1"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="mHg-vy-K1p">
+                                <rect key="frame" x="67" y="118" width="280" height="500"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozf-6o-7d8">
-                                <rect key="frame" x="298" y="839" width="96" height="31"/>
+                                <rect key="frame" x="269" y="831" width="119" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="New Image"/>
+                                <connections>
+                                    <action selector="newDogImage:" destination="2qF-wD-mB8" eventType="touchUpInside" id="0KM-tz-kqk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bKY-Er-LM8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Ozf-6o-7d8" firstAttribute="leading" secondItem="bKY-Er-LM8" secondAttribute="leading" constant="298" id="67q-qp-gFq"/>
-                            <constraint firstItem="bKY-Er-LM8" firstAttribute="trailing" secondItem="Ozf-6o-7d8" secondAttribute="trailing" constant="20" id="Cae-LZ-R82"/>
+                            <constraint firstItem="Ozf-6o-7d8" firstAttribute="leading" secondItem="bKY-Er-LM8" secondAttribute="leading" constant="269" id="67q-qp-gFq"/>
+                            <constraint firstItem="bKY-Er-LM8" firstAttribute="trailing" secondItem="Ozf-6o-7d8" secondAttribute="trailing" constant="26" id="Cae-LZ-R82"/>
                             <constraint firstItem="YbR-MZ-PMv" firstAttribute="top" secondItem="bKY-Er-LM8" secondAttribute="top" constant="30" id="LwO-48-oWH"/>
-                            <constraint firstItem="Ozf-6o-7d8" firstAttribute="bottom" secondItem="bKY-Er-LM8" secondAttribute="bottom" constant="8" id="MmG-gG-tPG"/>
+                            <constraint firstItem="Ozf-6o-7d8" firstAttribute="bottom" secondItem="bKY-Er-LM8" secondAttribute="bottom" id="MmG-gG-tPG"/>
+                            <constraint firstItem="mHg-vy-K1p" firstAttribute="centerX" secondItem="Yds-iF-xsI" secondAttribute="centerX" id="Nad-0x-9gT"/>
+                            <constraint firstItem="mHg-vy-K1p" firstAttribute="height" secondItem="YbR-MZ-PMv" secondAttribute="height" id="So4-Eo-bLk"/>
                             <constraint firstItem="YbR-MZ-PMv" firstAttribute="centerX" secondItem="Yds-iF-xsI" secondAttribute="centerX" id="Sre-jJ-Gr7"/>
+                            <constraint firstItem="mHg-vy-K1p" firstAttribute="top" secondItem="YbR-MZ-PMv" secondAttribute="top" id="uki-dj-BF0"/>
+                            <constraint firstItem="mHg-vy-K1p" firstAttribute="width" secondItem="YbR-MZ-PMv" secondAttribute="width" id="yU1-Ax-LdD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="UAJ-kM-HJo"/>
+                    <connections>
+                        <outlet property="dogBreedImage" destination="YbR-MZ-PMv" id="G4r-KO-cPL"/>
+                        <outlet property="spinner" destination="mHg-vy-K1p" id="2h9-IY-YAo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wec-Zd-NGP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1670" y="100"/>
+            <point key="canvasLocation" x="1669.5652173913045" y="99.776785714285708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jhs-IG-jHO">

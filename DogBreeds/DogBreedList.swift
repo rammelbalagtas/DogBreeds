@@ -27,10 +27,14 @@ class DogBreedList: Codable {
     var message: [String:[String]]
 }
 
-struct DogBreed {
+class DogBreed {
     var name: String
     var subBreed: [String]
     var image: UIImage?
+    init(name: String, subBreed: [String]) {
+        self.name = name
+        self.subBreed = subBreed
+    }
 }
 
 struct DogImage: Codable {

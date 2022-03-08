@@ -13,7 +13,8 @@ class DogBreedTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
         fetchDogBreed { response in
             switch response {
             case .success(let data):
@@ -25,6 +26,11 @@ class DogBreedTableViewController: UITableViewController {
                 print(error)
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -77,6 +83,15 @@ class DogBreedTableViewController: UITableViewController {
             }
         }
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if let dst = segue.destination as? DogBreedDetailViewController {
+            dst.dogBreed = dogBreedList[tableView.indexPathForSelectedRow!.row]
+            dst.title = dst.dogBreed.name
+        }
     }
     
 }
