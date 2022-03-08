@@ -16,32 +16,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dogbreed" id="MIN-yJ-Sas" customClass="DogBreedCell" customModule="DogBreeds" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dogbreed" rowHeight="60" id="MIN-yJ-Sas" customClass="DogBreedCell" customModule="DogBreeds" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MIN-yJ-Sas" id="uCI-h3-Sq6">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Breed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0T-T7-0UJ">
-                                            <rect key="frame" x="61" y="11.5" width="45.5" height="20.5"/>
+                                            <rect key="frame" x="61" y="20" width="45.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Breed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tP-gL-9dP">
-                                            <rect key="frame" x="114.5" y="11.5" width="279.5" height="20.5"/>
+                                            <rect key="frame" x="114.5" y="20" width="279.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lci-TT-afj">
-                                            <rect key="frame" x="8" y="-1" width="45" height="45.5"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lci-TT-afj">
+                                            <rect key="frame" x="8" y="7.5" width="45" height="45"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="45" id="LgI-o7-DXc"/>
                                                 <constraint firstAttribute="height" constant="45" id="cqA-wn-TBC"/>
                                             </constraints>
                                         </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="MxG-BL-Syz">
+                                            <rect key="frame" x="8" y="7.5" width="45" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="45" id="NBZ-Zs-qer"/>
+                                                <constraint firstAttribute="height" constant="45" id="jAW-9a-HyV"/>
+                                            </constraints>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="lci-TT-afj" firstAttribute="leading" secondItem="uCI-h3-Sq6" secondAttribute="leading" constant="8" id="35z-ye-ttO"/>
@@ -49,13 +56,16 @@
                                         <constraint firstItem="u0T-T7-0UJ" firstAttribute="centerY" secondItem="uCI-h3-Sq6" secondAttribute="centerY" id="CEr-fS-1a6"/>
                                         <constraint firstItem="lci-TT-afj" firstAttribute="centerY" secondItem="uCI-h3-Sq6" secondAttribute="centerY" id="CQ7-C5-yDF"/>
                                         <constraint firstItem="u0T-T7-0UJ" firstAttribute="leading" secondItem="lci-TT-afj" secondAttribute="trailing" constant="8" id="LKi-Mx-Jr6"/>
+                                        <constraint firstItem="MxG-BL-Syz" firstAttribute="leading" secondItem="uCI-h3-Sq6" secondAttribute="leading" constant="8" id="OF6-Ak-fiN"/>
                                         <constraint firstItem="3tP-gL-9dP" firstAttribute="centerY" secondItem="uCI-h3-Sq6" secondAttribute="centerY" id="ckB-We-MHQ"/>
+                                        <constraint firstItem="MxG-BL-Syz" firstAttribute="centerY" secondItem="uCI-h3-Sq6" secondAttribute="centerY" id="rBI-PS-wB4"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="3tP-gL-9dP" secondAttribute="trailing" id="yGN-oX-x7h"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="breedLabel" destination="u0T-T7-0UJ" id="tT7-XQ-xad"/>
                                     <outlet property="dogBreedImage" destination="lci-TT-afj" id="HpA-bx-O40"/>
+                                    <outlet property="spinner" destination="MxG-BL-Syz" id="da9-a8-WwX"/>
                                     <outlet property="subBreedLabel" destination="3tP-gL-9dP" id="jFn-SJ-34m"/>
                                 </connections>
                             </tableViewCell>

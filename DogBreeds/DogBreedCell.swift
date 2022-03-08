@@ -8,10 +8,11 @@
 import UIKit
 
 class DogBreedCell: UITableViewCell {
-
+    
     @IBOutlet weak var breedLabel: UILabel!
     @IBOutlet weak var subBreedLabel: UILabel!
     @IBOutlet weak var dogBreedImage: UIImageView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
