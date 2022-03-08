@@ -68,6 +68,7 @@ func fetchDogBreed(callback: @escaping (DogBreedResult) -> Void){
     }
 }
 
+// function to fetch random dog image URL based on breed
 func fetchDogImageURL(url: String, callback: @escaping (RandomDogImageResult) -> Void){
     APIHelper.fetch(url: url) { fetchResult in
         switch fetchResult {
@@ -85,6 +86,7 @@ func fetchDogImageURL(url: String, callback: @escaping (RandomDogImageResult) ->
     }
 }
 
+// function to fetch actual image data based on image URL
 func fetchDogImage(dogBreed: String, callback: @escaping (DogImageResult) -> Void){
     let url = "https://dog.ceo/api/breed/\(dogBreed)/images/random"
     fetchDogImageURL(url: url) { response in
@@ -104,6 +106,5 @@ func fetchDogImage(dogBreed: String, callback: @escaping (DogImageResult) -> Voi
         case .failure(let error):
             print("there was an error fetchin information \(error)")
         }
-        
     }
 }

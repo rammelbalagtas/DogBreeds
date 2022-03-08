@@ -10,11 +10,11 @@ import UIKit
 class DogBreedTableViewController: UITableViewController {
     
     var dogBreedList = [DogBreed]()
+    var firstLoad = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 100
+        //fetch dog breed list
         fetchDogBreed { response in
             switch response {
             case .success(let data):
@@ -30,7 +30,12 @@ class DogBreedTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tableView.reloadData()
+        //reload data after image randomly generated in detail view
+        if !firstLoad {
+            self.tableView.reloadData()
+        } else {
+            firstLoad = false
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -65,7 +70,9 @@ class DogBreedTableViewController: UITableViewController {
             cell.subBreedLabel.text = subbreedText
         }
         
+        // only retrieve random image once
         if let image = dogBreed.image {
+            // store previously retrieved image to avoid fetching again when scrolling
             cell.dogBreedImage.image = image
         } else {
             cell.spinner.isHidden = false
@@ -86,8 +93,7 @@ class DogBreedTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // pass the selected dog breed
         if let dst = segue.destination as? DogBreedDetailViewController {
             dst.dogBreed = dogBreedList[tableView.indexPathForSelectedRow!.row]
             dst.title = dst.dogBreed.name
