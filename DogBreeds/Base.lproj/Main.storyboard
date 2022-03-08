@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -67,6 +68,7 @@
                                     <outlet property="dogBreedImage" destination="lci-TT-afj" id="HpA-bx-O40"/>
                                     <outlet property="spinner" destination="MxG-BL-Syz" id="da9-a8-WwX"/>
                                     <outlet property="subBreedLabel" destination="3tP-gL-9dP" id="jFn-SJ-34m"/>
+                                    <segue destination="2qF-wD-mB8" kind="show" id="HlQ-ka-TOn"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -80,6 +82,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cEL-6R-rHG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="810.14492753623199" y="99.776785714285708"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="zr2-ty-jdW">
+            <objects>
+                <viewController id="2qF-wD-mB8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yds-iF-xsI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YbR-MZ-PMv">
+                                <rect key="frame" x="67" y="118" width="280" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="2MP-AA-iaQ"/>
+                                    <constraint firstAttribute="width" constant="280" id="wkk-OP-dI1"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozf-6o-7d8">
+                                <rect key="frame" x="298" y="839" width="96" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="New Image"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bKY-Er-LM8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ozf-6o-7d8" firstAttribute="leading" secondItem="bKY-Er-LM8" secondAttribute="leading" constant="298" id="67q-qp-gFq"/>
+                            <constraint firstItem="bKY-Er-LM8" firstAttribute="trailing" secondItem="Ozf-6o-7d8" secondAttribute="trailing" constant="20" id="Cae-LZ-R82"/>
+                            <constraint firstItem="YbR-MZ-PMv" firstAttribute="top" secondItem="bKY-Er-LM8" secondAttribute="top" constant="30" id="LwO-48-oWH"/>
+                            <constraint firstItem="Ozf-6o-7d8" firstAttribute="bottom" secondItem="bKY-Er-LM8" secondAttribute="bottom" constant="8" id="MmG-gG-tPG"/>
+                            <constraint firstItem="YbR-MZ-PMv" firstAttribute="centerX" secondItem="Yds-iF-xsI" secondAttribute="centerX" id="Sre-jJ-Gr7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="UAJ-kM-HJo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wec-Zd-NGP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1670" y="100"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jhs-IG-jHO">
